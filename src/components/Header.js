@@ -1,16 +1,21 @@
 import React,{Component} from 'react';
-import {Navbar, Nav, NavbarBrand,NavbarToggler,NavItem,Jumbotron, Collapse} from 'reactstrap';
+import {Modal, ModalHeader, ModalBody, Navbar, Nav, NavbarBrand,NavbarToggler,NavItem,Jumbotron, Collapse, Form,FormGroup, Input, Label} from 'reactstrap';
 import {NavLink} from 'react-router-dom';
 class Header extends Component{
   constructor(props){
     super(props);
     this.state={
-      isOpen:true
+      isNavOpen:false,
+      isModalOpen:false
     }
     this.toggleNav=this.toggleNav.bind(this);
+    this.toggleModal=this.toggleModal.bind(this);
   }
   toggleNav(){
-    this.setState({isOpen:!this.state.isOpen});
+    this.setState({isNavOpen:!this.state.isNavOpen});
+  } 
+  toggleModal(){
+    this.setState({isModalOpen:!this.state.isModalOpen});
   }
 render(){
     return(
@@ -21,7 +26,7 @@ render(){
          <img src="assets/images/logo.png" height="30" width="41"/>
        </NavbarBrand>
        <Nav className="mr-auto" navbar>
-         <Collapse isOpen={this.state.isOpen} navbar>
+         <Collapse isOpen={this.state.isNavOpen} navbar>
        <NavItem>
               <NavLink className="nav-link" to="/home">
               <span className="fa fa-home fa-lg">Home</span>
@@ -43,6 +48,11 @@ render(){
               </NavLink>
             </NavItem>
             </Collapse>
+            <Nav className="ml-auto">
+                <NavItem>
+                  <button onClick={this.toggleModal}><span><i className="fa fa-sign-in">login</i></span></button>
+                </NavItem>
+            </Nav>
            </Nav>
        </Navbar>
      <Jumbotron>
@@ -55,6 +65,27 @@ render(){
             </div>
         </div>
      </Jumbotron>
+     <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
+       <ModalHeader>
+         Login
+       </ModalHeader>
+       <ModalBody>
+         <Form onSubmit={this.handleLogin} >
+       <FormGroup>
+          <Label htmlFor="username">username</Label>
+          <Input type="text" id="username" name="username"></Input>
+        </FormGroup>
+         <FormGroup>
+          <Label htmlFor="password">password</Label>
+          <Input type="password" id="password" name="password"/>
+          <Input type="checkbox" name="remember">remember me </Input>
+        </FormGroup>
+        <FormGroup>
+          <button type="submit" className="bg-primary">login</button>
+        </FormGroup>
+        </Form>
+       </ModalBody>
+     </Modal>
         </React.Fragment>
     )
 }
