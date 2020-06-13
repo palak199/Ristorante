@@ -1,10 +1,10 @@
-import {LEADERS} from '../shared/leaders';
-import {Comments} from '../shared/comments';
-import {Promotions} from '../shared/promotions';
-import {Dishes} from '../shared/dishes';
+import {Leaders} from '../shared/Leaders';
+import {Comments} from '../shared/Comments';
+import {Promotions} from '../shared/Promotions';
+import {Dishes} from '../shared/Dishes';
 export const initialState={
 dishes:Dishes,
-leaders:LEADERS,
+leaders:Leaders,
 promotions:Promotions,
 comments:Comments
 }

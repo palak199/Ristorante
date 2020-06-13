@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
-import {Dishes} from '../shared/dishes';
+import {Dishes} from '../shared/Dishes';
 import DishDetail from '../components/DishDetail';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -9,9 +9,9 @@ import Contact from '../components/Contact';
 import About from '../components/About';
 import Menu from '../components/Menu';
 import Home from '../components/Home';
-import {Leaders} from '../shared/leaders';
-import {Comments} from '../shared/comments';
-import {Promotions} from '../shared/promotions';
+import {Leaders} from '../shared/Leaders';
+import {Comments} from '../shared/Comments';
+import {Promotions} from '../shared/Promotions';
 class Main extends Component {
   constructor(props){
     super(props);
