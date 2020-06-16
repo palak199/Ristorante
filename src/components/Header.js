@@ -23,7 +23,7 @@ render(){
       <Navbar dark>
         <NavbarToggler  onClick={this.toggleNav}/>
        <NavbarBrand href="/">
-         <img src="assets/images/logo.png" height="30" width="41"/>
+         <img src="assets/images/logo.png" alt="i" height="30" width="41"/>
        </NavbarBrand>
        <Nav className="mr-auto" navbar>
          <Collapse isOpen={this.state.isNavOpen} navbar>
