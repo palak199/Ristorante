@@ -79,9 +79,9 @@ const validEmail=(val)=>/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
                                     <Control.text model=".firstname" id="firstname" name="firstname"
                                         placeholder="First Name"
                                         className="form-control"
-                                        validators={{ required,minlength:minlength(3),maxlength:maxlength(15) }}
+                                        // validators={{ required,minlength:minlength,maxlength:maxlength }}
                                          />
-                                         <Errors
+                                         {/* <Errors
                                          className="text-danger"
                                          model=".firstname"
                                          show="touched"
@@ -90,7 +90,7 @@ const validEmail=(val)=>/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
                                              minlength:"a",
                                              maxlength:"a",
                                           }}
-                                         />
+                                         /> */}
                                 </Col>
                             </Row>
                             <Row className="form-group">
@@ -99,9 +99,9 @@ const validEmail=(val)=>/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
                                     <Control.text model=".lastname" id="lastname" name="lastname"
                                         placeholder="Last Name"
                                         className="form-control"
-                                        validators={{ required,minlength:minlength(3),maxlength:maxlength(15) }}
+                                        // validators={{ required,minlength:minlength,maxlength:maxlength }}
                                         />
-                                        <Errors
+                                        {/* <Errors
                                         className="text-danger"
                                         model=".lastname"
                                         show="touched"
@@ -110,7 +110,7 @@ const validEmail=(val)=>/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
                                             minlength:"atleast2 characters long",
                                             maxlength:"must be shorter than 15 characters"
                                          }}
-                                        />
+                                        /> */}
                                 </Col>
                             </Row>
                             <Row className="form-group">
@@ -119,9 +119,9 @@ const validEmail=(val)=>/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
                                     <Control.text model=".telnum" id="telnum" name="telnum"
                                         placeholder="Tel. Number"
                                         className="form-control"
-                                        validators={{ required,minlength:minlength(3),maxlength:maxlength(15),isNumber }}
+                                        // validators={{ required,minlength:minlength,maxlength:maxlength,isNumber }}
                                          />
-                                         <Errors
+                                         {/* <Errors
                                          className="text-danger"
                                          model=".telnum"
                                          show="touched"
@@ -132,7 +132,7 @@ const validEmail=(val)=>/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
                                              isNumber:"must be number"
                                           }}
                                          
-                                         />
+                                         /> */}
                                 </Col>
                             </Row>
                             <Row className="form-group">
@@ -140,9 +140,10 @@ const validEmail=(val)=>/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
                                 <Col md={10}>
                                     <Control.text model=".email" id="email" name="email"
                                         placeholder="Email"
-                                        className="form-control" validators={{ required,validEmail}}
+                                        className="form-control" 
+                                        // validators={{ required,validEmail}}
                                         />
-                                        <Errors
+                                        {/* <Errors
                                         className="text-danger"
                                         model=".email"
                                         show="touched"
@@ -151,7 +152,7 @@ const validEmail=(val)=>/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
                                             validEmail:"invalid email"
     
                                          }}
-                                        />/>
+                                        /> */}
                                 </Col>
                             </Row>
                             <Row className="form-group">
